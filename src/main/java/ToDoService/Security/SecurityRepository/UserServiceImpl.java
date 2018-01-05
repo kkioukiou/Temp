@@ -26,6 +26,7 @@ public class UserServiceImpl{
 
     public void saveUser(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        System.out.println(user.toString());
         user.setActive(true);
         user.setRole(roleRepository.findByRole("ADMIN"));
         System.out.println(user.toString());
