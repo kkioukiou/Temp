@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Admin Page</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+	<script src="/scripts/libs_jquery_3.2.1_jquery.js" defer="defer"></script>
+	<script src="/scripts/popper.min.js" defer="defer"></script>
+	<script src="/scripts/bootstrap.min.js" defer="defer"></script>
+	<script src="/scripts/ToDoRepository.js" defer="defer"></script>
+	<script src="/scripts/item.js" defer="defer"></script>
+	<script src="/scripts/toDoList.js" defer="defer"></script>
+	<script src="/scripts/label.js" defer="defer"></script>
+	<script src="/scripts/LabelForAllLabelsList.js" defer="defer"></script>
+	<script src="/scripts/LabelsForAddLabelToItem.js" defer="defer"></script>
+	<script src="/scripts/LabelForLabelsListInItemFooter.js" defer="defer"></script>
+	<script src="/scripts/toDoLabels.js" defer="defer"></script>
+	<script src="/scripts/main.js" defer="defer"></script>
+</head>
+
+<body>
+	<div class="container">
+	
+		<form th:action="@{/logout}" method="get">
+			<button class="btn btn-md btn-danger btn-block" name="registration"
+				type="Submit">Logout</button>
+		</form>    
+		
+		<div class="panel-group" style="margin-top:40px">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Labels
+						</button>
+						<div class="dropdown-menu to-do-labels" aria-labelledby="dropdownMenuButton" />
+					</div>
+					<span th:utext="${userName}"></span>
+				</div>
+				<div class="panel-body">
+					<div class="container to-do-list">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>
